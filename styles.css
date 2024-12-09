@@ -22,7 +22,6 @@ body {
     padding: 10px;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
 .logo{
@@ -31,12 +30,19 @@ body {
 
 .nav{
     color: #fcfffa; /*white*/
-    font-size: 1em;
+    font-size: 1.5em;
     background-color: #8A9A5B;
-    padding: 20px;
     margin: 5px;
     flex: 0 0 auto;
 }
+
+.pdf {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
 
 .rectangle {
     width: 1000px;
@@ -44,6 +50,7 @@ body {
     background-image: linear-gradient(#e07ea7, #e591b3, #eaadc6, #f2cfdb, #f8eaed, #fcfffa);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+    top: 200px;
 }
 h1 {
   color: #fcfffa;
