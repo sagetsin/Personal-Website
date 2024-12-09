@@ -18,7 +18,7 @@ body {
     width: 1000px;
     position: fixed;
     justify-content: space-around;
-    align-items: right;
+    align-items: center;
     top: 0;
     z-index: 1000;
     background-color: #FFFFFF;
