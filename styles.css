@@ -17,6 +17,12 @@ body {
     flex-direction: row;
     width: 1000px;
     position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
 .logo{
@@ -26,6 +32,10 @@ body {
 .nav{
     color: #fcfffa; /*white*/
     font-size: 1em;
+    background-color: #8A9A5B;
+    padding: 20px;
+    margin: 5px;
+    flex: 0 0 auto;
 }
 
 .rectangle {
@@ -37,7 +47,6 @@ body {
 }
 h1 {
   color: #fcfffa;
-  text-shadow: 2px 2px;
   font-size: 2.5em;
   text-align: center;
 }
