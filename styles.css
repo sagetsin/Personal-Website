@@ -16,7 +16,7 @@ body {
     flex-direction: row;
     width: 1000px;
     position: fixed;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 10px;
     top: 0;
@@ -53,18 +53,10 @@ body {
     top: 200px;
 }
 
-.main-contents{
-    display: flex;
-    flex-direction: column;
-    width: 1000px;
-    position: fixed;
-    justify-content: space-between;
-    padding: 10px;
-    top: 0;
-}
 
 .contents{
-    top: 200px;
+    margin-top: 200px;
+    padding: 20px;
 }
 
 h1 {
