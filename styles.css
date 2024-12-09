@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Pixelify Sans");
+@import url("https://fonts.googleapis.com/css?family=Press Start 2P");
 
 body {
   background-color: #8A9A5B;
@@ -34,6 +33,7 @@ body {
     background-color: #8A9A5B;
     margin: 5px;
     flex: 0 0 auto;
+    font-family: 'Press Start 2P';
 }
 
 .pdf {
@@ -52,10 +52,23 @@ body {
     border-radius: 8px;
     top: 200px;
 }
+
+.main-contents{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    position: fixed;
+    justify-content: space-between;
+    padding: 10px;
+    top: 0;
+}
+
 h1 {
   color: #fcfffa;
   font-size: 2.5em;
   text-align: center;
+  font-family: 'Pixelify Sans';
+
 }
 
 h2 {
