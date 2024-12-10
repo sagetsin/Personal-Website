@@ -12,7 +12,7 @@ body {
   height: 100vh;
 }
 
-.dashboard{
+.main-contents{
     display: flex;
     flex-direction: row;
     padding: 15px;
