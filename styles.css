@@ -23,8 +23,9 @@ body {
     display: flex;
     flex-direction: row;
     width: 1500px;
+    height: 100px;
     position: sticky;
-    align-items: left;
+    align-items: center;
     top: 0;
     z-index: 1000;
     background-color: #FFFFFF;
@@ -51,7 +52,7 @@ body {
     color: #fcfffa; /*white*/
     font-size: 18px;
     background-color: #8A9A5B;
-    margin: 5px;
+    margin: 0px;
     height: 60px;
     /*flex-basis: 100%;*/
     font-family: 'Press Start 2P';
