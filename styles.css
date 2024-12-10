@@ -24,7 +24,7 @@ body {
     flex-direction: row;
     width: 1500px;
     position: fixed;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     top: 0;
     z-index: 1000;
@@ -32,6 +32,8 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .logo{
@@ -45,7 +47,7 @@ body {
     font-size: 18px;
     background-color: #8A9A5B;
     margin: 5px;
-    flex-basis: 100%;
+    /*flex-basis: 100%;*/
     font-family: 'Press Start 2P';
 }
 
@@ -64,13 +66,15 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     top: 200px;
-    position: fixed;
+
 }
 
 
 .contents{
     margin-top: 200px;
     padding: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
