@@ -52,6 +52,7 @@ body {
     font-size: 18px;
     background-color: #8A9A5B;
     margin: 5px;
+    height: 60px;
     /*flex-basis: 100%;*/
     font-family: 'Press Start 2P';
     transition: background-color 0.3s ease;
