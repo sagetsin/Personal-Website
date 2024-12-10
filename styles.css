@@ -104,6 +104,28 @@ body {
     align-items: center;
 }
 
+.article-display{
+    width: 1500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.article-pic{
+    height: 200px;
+}
+
+.article-info{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 10px;
+    text-align: left;
+}
+
+
 h1 {
   color: #fcfffa;
   font-size: 4.5em;
@@ -118,9 +140,12 @@ h1 {
 
 }
 
+.article-title,
 h2 {
   font-size: 2.5em;
-  text-align: center;
+  text-align: left;
+  font-family: 'Press Start 2P';
+  color: #fcfffa;
 }
 
 h3 {
