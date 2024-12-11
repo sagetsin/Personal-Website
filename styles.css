@@ -67,11 +67,12 @@ body {
 }
 
 .pdf {
-        width: 100%;
-        aspect-ratio: 11 / 8;
-        height: 100%;
-        margin: 0;
-        padding: 0;
+    width: 800px;
+    aspect-ratio: 11 / 8;
+    height: 1100px;
+    padding: 0;
+    display: block;
+    margin: 0 auto;
 }
 
 .rectangle {
@@ -133,6 +134,10 @@ body {
     margin-right: 30px;
 }
 
+.player{
+    display:none;
+}
+
 .horizontal-line{
    display: block;
    margin-top: 0.5em;
@@ -143,13 +148,13 @@ body {
    border-width: 0px;
    height: 5px;
    background-color: #fcfffa;
-   width: 100%;
+   width: 80%;
 }
 
 .top-fade{
-    background-image: linear-gradient(to top, rgba(252, 255, 250,0), rgba(252, 255, 250,1));
+    background-image: linear-gradient(to top, rgba(252, 255, 250,0), rgba(252, 255, 250, 0.1),rgba(252, 255, 250, 0.4), rgba(252, 255, 250,1));
     width: 1500px;
-    height: 500px;
+    height: 150px;
 }
 
 
