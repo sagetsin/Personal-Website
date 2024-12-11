@@ -59,6 +59,7 @@ body {
     font-family: 'Press Start 2P';
     transition: background-color 0.3s ease;
     padding: 10px 15px;
+    align-items: center;
 }
 
 .nav:hover {
@@ -117,12 +118,29 @@ body {
     height: 200px;
 }
 
+.article-image{
+    height: 300px;
+}
+
 .article-info{
     display: flex;
     flex-direction: column;
     align-items: left;
     padding: 10px;
     text-align: left;
+}
+
+.horizontal-line{
+   display: block;
+   margin-top: 0.5em;
+   margin-bottom: 0.5em;
+   margin-left: auto;
+   margin-right: auto;
+   border-style: inset;
+   border-width: 0px;
+   height: 5px;
+   background-color: #fcfffa;
+   width: 100%;
 }
 
 
