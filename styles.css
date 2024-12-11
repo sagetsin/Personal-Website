@@ -89,21 +89,16 @@ body {
     justify-content: center;
 }
 
-.rotating-img-right {
+.rotating-img-right,
+ .rotating-img-left{
     width: 400px; /* Adjust the size as needed */
-    position: absolute; /* Keeps the image fixed to the viewport */
-    top: 50%; /* Center the image vertically */
+    top: 30%; /* Center the image vertically */
     object-fit: cover; /* Maintain image proportions */
-    animation: spin 8s linear infinite; /* Apply the animation */
-}
-
-.rotating-img-left {
-    width: 400px; /* Adjust the size as needed */
-    position: absolute; /* Keeps the image fixed to the viewport */
-    top: 50%; /* Center the image vertically */
-    object-fit: cover; /* Maintain image proportions */
+    position: absolute;
     animation: spin 10s linear infinite; /* Apply the animation */
 }
+
+
 
 
 .contents{
