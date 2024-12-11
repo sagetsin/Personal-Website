@@ -92,7 +92,6 @@ body {
     width: 250px; /* Adjust the size as needed */
     position: fixed; /* Keeps the image fixed to the viewport */
     top: 50%; /* Center the image vertically */
-    right: 0; /* Align to the right edge */
     transform: translateY(-50%); /* Adjust vertical centering */
     object-fit: cover; /* Maintain image proportions */
     animation: spin 8s linear infinite; /* Apply the animation */
