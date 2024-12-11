@@ -89,11 +89,22 @@ body {
     justify-content: center;
 }
 
-.rotating-img {
-    width: 250px; /* Adjust the size as needed */
+.rotating-img-right {
+    width: 400px; /* Adjust the size as needed */
     position: fixed; /* Keeps the image fixed to the viewport */
     top: 50%; /* Center the image vertically */
-    transform: translateY(-50%); /* Adjust vertical centering */
+    right: 0;
+    transform: translateX(-50%); /* Adjust vertical centering */
+    object-fit: cover; /* Maintain image proportions */
+    animation: spin 8s linear infinite; /* Apply the animation */
+}
+
+.rotating-img-left {
+    width: 400px; /* Adjust the size as needed */
+    position: fixed; /* Keeps the image fixed to the viewport */
+    top: 50%; /* Center the image vertically */
+    left: 0;
+    transform: translateX(50%); /* Adjust vertical centering */
     object-fit: cover; /* Maintain image proportions */
     animation: spin 8s linear infinite; /* Apply the animation */
 }
@@ -149,7 +160,9 @@ body {
 }
 
 .player{
-    display:none;
+    display: none;
+    height: 500px;
+    width: 500px;
 }
 
 .horizontal-line{
@@ -175,12 +188,13 @@ h1 {
   color: #fcfffa;
   font-size: 5.5em;
   text-align: left;
+  margin-top: 30px;
   margin-left: 50px;
   text-shadow:
-          -2px -2px 0 #8A9A5B,
-          2px -2px 0 #8A9A5B,
-          -2px 2px 0 #8A9A5B,
-          2px 2px 0 #8A9A5B,
+          -4px -4px 0 #8A9A5B,
+          4px -4px 0 #8A9A5B,
+          -4px 4px 0 #8A9A5B,
+          4px 4px 0 #8A9A5B,
           2px 2px 4px black;
   font-family: 'Pixelify Sans';
 }
