@@ -4,3 +4,12 @@ let nav = document.querySelector(".navcontainer");
 menuicn.addEventListener("click", () => {
     nav.classList.toggle("navclose");
 })
+
+const playButton = document.getElementById('playButton');
+const spotifyPlayer = document.getElementById('player');
+
+playButton.addEventListener('click', () => {
+    spotifyPlayer.style.display = 'block'; // Show the player
+    spotifyPlayer.src += '?autoplay=1'; // Append autoplay parameter
+    spotifyPlayer.style.display = 'none'; // Hide the player
+});
