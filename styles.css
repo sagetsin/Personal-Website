@@ -79,7 +79,6 @@ body {
     height: 100%;
     background-image: linear-gradient(#e07ea7, #e591b3, #eaadc6, #f2cfdb, #f8eaed, #fcfffa);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
     top: 100px;
 
 }
@@ -119,7 +118,9 @@ body {
 }
 
 .article-image{
-    height: 300px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
 }
 
 .article-info{
@@ -128,14 +129,16 @@ body {
     align-items: left;
     padding: 10px;
     text-align: left;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .horizontal-line{
    display: block;
    margin-top: 0.5em;
-   margin-bottom: 0.5em;
-   margin-left: auto;
-   margin-right: auto;
+   margin-bottom: 0em;
+   margin-left: 30px;
+   margin-right: 30px;
    border-style: inset;
    border-width: 0px;
    height: 5px;
@@ -143,19 +146,25 @@ body {
    width: 100%;
 }
 
+.top-fade{
+    background-image: linear-gradient(to top, rgba(252, 255, 250,0), rgba(252, 255, 250,1));
+    width: 1500px;
+    height: 500px;
+}
+
 
 h1 {
   color: #fcfffa;
-  font-size: 4.5em;
+  font-size: 5.5em;
   text-align: left;
-  margin-left: 30px;
+  margin-left: 50px;
   text-shadow:
-          -1px -1px 0 #8A9A5B,
-          1px -1px 0 #8A9A5B,
-          -1px 1px 0 #8A9A5B,
-          1px 1px 0 #8A9A5B;
+          -2px -2px 0 #8A9A5B,
+          2px -2px 0 #8A9A5B,
+          -2px 2px 0 #8A9A5B,
+          2px 2px 0 #8A9A5B,
+          2px 2px 4px black;
   font-family: 'Pixelify Sans';
-
 }
 
 .article-title,
@@ -164,6 +173,9 @@ h2 {
   text-align: left;
   font-family: 'Press Start 2P';
   color: #fcfffa;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-decoration: none;
 }
 
 h3 {
@@ -177,7 +189,8 @@ ul,
 li,
 label {
   color: #56463A;
-  margin-right: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
   font-size: 30px;
   font-family: 'Questrial';
   margin-left: 30px;
