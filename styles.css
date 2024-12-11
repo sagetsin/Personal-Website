@@ -10,6 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .main-contents{
@@ -81,6 +82,24 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     top: 100px;
 }
+.main-music{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.rotating-img {
+    width: 400px; /* Adjust the size as needed */
+    position: fixed; /* Keeps the image fixed to the viewport */
+    top: 50%; /* Center the image vertically */
+    right: 0; /* Align to the right edge */
+    transform: translateY(-50%); /* Adjust vertical centering */
+    width: 150%; /* Ensure the image is large enough to display half */
+    object-fit: cover; /* Maintain image proportions */
+    animation: spin 3s linear infinite; /* Apply the animation */
+}
+
+
 
 .contents{
     margin-top: 100px;

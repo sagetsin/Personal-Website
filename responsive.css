@@ -17,3 +17,13 @@
 
     }
 }
+
+/* Define the keyframes for rotation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg); /* Start at 0 degrees */
+    }
+    to {
+        transform: rotate(360deg); /* End at 360 degrees */
+    }
+}
