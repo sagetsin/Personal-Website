@@ -69,7 +69,7 @@ body {
 
 .pdf {
     width: 1000px;
-    height: 1600px;
+    height: 1200px;
     aspect-ratio: 11 / 8;
     padding: 0;
     display: block;
@@ -138,6 +138,7 @@ body {
     height: 500px;
     display: block;
     margin: 0 auto;
+    padding-bottom: 30px;
 }
 
 .article-info{
