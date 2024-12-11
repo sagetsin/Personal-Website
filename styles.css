@@ -93,7 +93,7 @@ body {
     width: 400px; /* Adjust the size as needed */
     position: fixed; /* Keeps the image fixed to the viewport */
     top: 50%; /* Center the image vertically */
-    right: 0;
+    right: -200;
     transform: translateX(-50%); /* Adjust vertical centering */
     object-fit: cover; /* Maintain image proportions */
     animation: spin 8s linear infinite; /* Apply the animation */
@@ -101,12 +101,12 @@ body {
 
 .rotating-img-left {
     width: 400px; /* Adjust the size as needed */
-    position: fixed; /* Keeps the image fixed to the viewport */
+    position: absolute; /* Keeps the image fixed to the viewport */
     top: 50%; /* Center the image vertically */
-    left: 0;
+    left: -200;
     transform: translateX(50%); /* Adjust vertical centering */
     object-fit: cover; /* Maintain image proportions */
-    animation: spin 8s linear infinite; /* Apply the animation */
+    animation: spin 10s linear infinite; /* Apply the animation */
 }
 
 
@@ -188,7 +188,7 @@ h1 {
   color: #fcfffa;
   font-size: 5.5em;
   text-align: left;
-  margin-top: 30px;
+  padding-top: 40px;
   margin-left: 50px;
   text-shadow:
           -4px -4px 0 #8A9A5B,
