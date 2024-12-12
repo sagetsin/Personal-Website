@@ -89,13 +89,23 @@ body {
     justify-content: center;
 }
 
-.rotating-img-right,
+.rotating-img-right{
+    width: 400px; /* Adjust the size as needed */
+    top: 30%; /* Center the image vertically */
+    object-fit: cover; /* Maintain image proportions */
+    position: absolute;
+    animation: spin 10s linear infinite; /* Apply the animation */
+    right: 50%;
+    transform: translateX(50%);
+}
  .rotating-img-left{
     width: 400px; /* Adjust the size as needed */
     top: 30%; /* Center the image vertically */
     object-fit: cover; /* Maintain image proportions */
     position: absolute;
     animation: spin 10s linear infinite; /* Apply the animation */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
