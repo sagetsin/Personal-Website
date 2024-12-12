@@ -4,6 +4,7 @@
         // Open the pop-up
         function openPopup() {
             popup.style.display = "block";
+            window.open("https://sagetsin.github.io/main/pages/spotify-player.html", "Spotify Player", "width=500,height=300");
         }
 
         // Close the pop-up

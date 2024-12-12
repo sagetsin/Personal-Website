@@ -199,10 +199,11 @@ body {
     font-style: italics;
     font-size: 3.5em;
     text-align: center;
-    padding: 10px;
+    padding: 0px;
+    margin: 0px;
     color: #f8eaed;
     display: inline-block;  /* Make it inline so it can move */
-    animation: moveText 10s linear infinite
+    animation: moveText 20s linear infinite
 }
 
 
