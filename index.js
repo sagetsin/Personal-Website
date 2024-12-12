@@ -1,20 +1,18 @@
  // Get elements
-        const openBtn = document.getElementById("openBtn");
-        const closeBtn = document.getElementById("closeBtn");
         const popup = document.getElementById("popup");
 
         // Open the pop-up
-        openBtn.onclick = function() {
+        function openPopup() {
             popup.style.display = "block";
         }
 
         // Close the pop-up
-        closeBtn.onclick = function() {
+        function close() {
             popup.style.display = "none";
         }
 
         // Optionally close the popup if the overlay is clicked
-        popup.onclick = function(event) {
+        function offPop(event) {
             if (event.target === popup) {
                 popup.style.display = "none";
             }
