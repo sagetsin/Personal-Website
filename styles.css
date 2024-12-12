@@ -10,7 +10,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  overflow-x: hidden;
 }
 
 .main-contents{
@@ -96,7 +95,7 @@ body {
     position: absolute;
     animation: spin 10s linear infinite; /* Apply the animation */
     right: 50%;
-    transform: translateX(50%);
+    transform: translateX(-50%);
 }
  .rotating-img-left{
     width: 400px; /* Adjust the size as needed */
@@ -105,7 +104,7 @@ body {
     position: absolute;
     animation: spin 10s linear infinite; /* Apply the animation */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(50%);
 }
 
 
@@ -141,7 +140,7 @@ body {
 }
 
 .article-pic{
-    height: 200px;
+    width: 300px;
 }
 
 .article-image{
@@ -210,6 +209,7 @@ h2 {
   margin-left: 30px;
   margin-right: 30px;
   text-decoration: none;
+  line-height: 1.6;
 }
 
 h3 {
