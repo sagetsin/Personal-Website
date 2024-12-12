@@ -186,15 +186,13 @@ body {
     background-image: linear-gradient(to top, rgba(252, 255, 250,0), rgba(252, 255, 250,1));
     height: 150px;
 }
-
-.slogan-fade{
-    background-image: linear-gradient(to top, rgba(138, 154, 91,0), rgba(138, 154, 91,1));
-    height: 75px;
-    justify-content: center;
-    width: 900px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.slogan-container {
+    width: 100%;  /* Full width of the screen */
+    overflow: hidden;  /* Hide anything that goes outside the container */
+    white-space: nowrap;  /* Prevent the text from wrapping to the next line */
+    position: relative;
 }
+
 
 .slogan{
     font-family: 'VT323', monospace;
@@ -203,6 +201,8 @@ body {
     text-align: center;
     padding: 10px;
     color: #f8eaed;
+    display: inline-block;  /* Make it inline so it can move */
+    animation: moveText 10s linear infinite
 }
 
 

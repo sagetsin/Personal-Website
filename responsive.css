@@ -27,3 +27,12 @@
         transform: rotate(360deg); /* End at 360 degrees */
     }
 }
+
+@keyframes moveText {
+    0% {
+        transform: translateX(110%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
