@@ -97,7 +97,7 @@ body {
     object-fit: cover; /* Maintain image proportions */
     position: absolute;
     animation: spin 10s linear infinite; /* Apply the animation */
-    right: 70%;
+    right: 100%;
 }
  .rotating-img-left{
     width: 400px; /* Adjust the size as needed */
@@ -105,7 +105,7 @@ body {
     object-fit: cover; /* Maintain image proportions */
     position: absolute;
     animation: spin 10s linear infinite; /* Apply the animation */
-    left: 70%;
+    left: 100%;
 }
 
 
