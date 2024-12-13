@@ -92,7 +92,7 @@ body {
     justify-content: center;
 }
 
-.rotating-img-right{
+.rotate-right{
     width: 400px;
     top: 30%;
     object-fit: cover;
@@ -101,13 +101,31 @@ body {
     right: 90%;
     transition: transform 0.7s ease-in-out;
 }
- .rotating-img-left{
+ .rotate-left{
     width: 400px;
     top: 30%;
     object-fit: cover;
     position: absolute;
     animation: spin 10s linear infinite;
     left: 90%;
+    transition: transform 0.7s ease-in-out;
+}
+
+#vinyl-left{
+    width: 400px;
+    top: 30%;
+    object-fit: cover;
+    position: absolute;
+    left: 90%;
+    transition: transform 0.7s ease-in-out;
+}
+
+#vinyl-right{
+    width: 400px;
+    top: 30%;
+    object-fit: cover;
+    position: absolute;
+    right: 90%;
     transition: transform 0.7s ease-in-out;
 }
 
@@ -137,7 +155,7 @@ body {
     height: 400px;
     right: 90%;
     top: 30%;
-    position: absolute;
+    position: absolute;k
 }
 
 
@@ -359,5 +377,5 @@ br{
 }
 
 .proj-img{
-	width 300px;
+	width 100px;
 }

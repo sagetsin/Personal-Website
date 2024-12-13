@@ -1,5 +1,6 @@
  // Get elements
-        const popup = document.getElementById("popup");
+        const left = document.getElementById("vinyl-left");
+        const right = document.getElementById("vinyl-right");
         var popupOpen = false;
 
         // Open the pop-up
@@ -7,5 +8,7 @@
             if(!popupOpen) {
                 window.open("https://sagetsin.github.io/main/pages/spotify-player.html", "Spotify Player", "width=500,height=300");
                 popupOpen = true;
+                left.setAttribute("class", "rotate-left");
+                right.setAttribute("class", "rotate-right");
             }
         }
