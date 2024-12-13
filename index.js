@@ -8,8 +8,8 @@
             if(!popupOpen) {
                 window.open("https://sagetsin.github.io/main/pages/spotify-player.html", "Spotify Player", "width=500,height=300");
                 popupOpen = true;
-                left.setAttribute("class", "rotate-left");
-                right.setAttribute("class", "rotate-right");
+//                left.setAttribute("class", "rotate-left");
+//                right.setAttribute("class", "rotate-right");
             }
         }
 
