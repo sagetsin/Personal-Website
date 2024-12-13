@@ -12,3 +12,12 @@
                 right.setAttribute("class", "rotate-right");
             }
         }
+
+        function closePopup(){
+            if(popupOpen){
+                window.close();
+                popupOpen = false;
+                left.setAttribute("class", "vinyl-left");
+                right.setAttribute("class", "vinyl-right");
+            }
+        }

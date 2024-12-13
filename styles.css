@@ -111,6 +111,13 @@ body {
     transition: transform 0.7s ease-in-out;
 }
 
+.rotate-left:hover{
+    transform: scale(1.2);
+}
+.rotate-right:hover{
+    transform: scale(1.2);
+}
+
 #vinyl-left{
     width: 400px;
     top: 30%;
@@ -129,10 +136,28 @@ body {
     transition: transform 0.7s ease-in-out;
 }
 
-.rotating-img-right:hover{
+.vinyl-right{
+    width: 400px;
+    top: 30%;
+    object-fit: cover;
+    position: absolute;
+    right: 90%;
+    transition: transform 0.7s ease-in-out;
+}
+
+.vinyl-left{
+    width: 400px;
+    top: 30%;
+    object-fit: cover;
+    position: absolute;
+    left: 90%;
+    transition: transform 0.7s ease-in-out;
+}
+
+.vinyl-left:hover{
     transform: scale(1.2);
 }
-.rotating-img-left:hover{
+.vinyl-right:hover{
     transform: scale(1.2);
 }
 
@@ -140,6 +165,8 @@ body {
     border: none;
     cursor: pointer;
     appearance: none;
+    background: transparent;
+    border: none !important;
     width:400px;
     height: 400px;
     left: 90%;
@@ -149,13 +176,15 @@ body {
 
 .vinyl-button-right{
     border: none;
+    background: transparent;
+    border: none !important;
     cursor: pointer;
     appearance: none;
     width:400px;
     height: 400px;
     right: 90%;
     top: 30%;
-    position: absolute;k
+    position: absolute;
 }
 
 
