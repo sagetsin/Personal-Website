@@ -99,7 +99,7 @@ body {
     position: absolute;
     animation: spin 10s linear infinite;
     right: 90%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.7s ease-in-out;
 }
  .rotating-img-left{
     width: 400px;
@@ -107,18 +107,39 @@ body {
     object-fit: cover;
     position: absolute;
     animation: spin 10s linear infinite;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     left: 90%;
+    transition: transform 0.7s ease-in-out;
 }
-.rotating-img-right:hover,
+
+.rotating-img-right:hover{
+    transform: scale(1.2);
+}
 .rotating-img-left:hover{
     transform: scale(1.2);
 }
 
-.rotating-img-right:active,
-.rotating-img-left:active{
-    transform: scale(1);
+.vinyl-button-left{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    width:400px;
+    height: 400px;
+    left: 90%;
+    top: 30%;
+    position: absolute;
 }
+
+.vinyl-button-right{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    width:400px;
+    height: 400px;
+    right: 90%;
+    top: 30%;
+    position: absolute;
+}
+
 
 .spotify-player{
     display: flex;
