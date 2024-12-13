@@ -118,7 +118,7 @@ body {
     transform: scale(1.2);
 }
 
-#vinyl-left{
+/*#vinyl-left{
     width: 400px;
     top: 30%;
     object-fit: cover;
@@ -134,7 +134,7 @@ body {
     position: absolute;
     right: 90%;
     transition: transform 0.7s ease-in-out;
-}
+}*/
 
 .vinyl-right{
     width: 400px;
