@@ -99,7 +99,6 @@ body {
     position: absolute;
     animation: spin 10s linear infinite;
     right: 90%;
-    outline: 2px solid white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
  .rotating-img-left{
@@ -108,7 +107,6 @@ body {
     object-fit: cover;
     position: absolute;
     animation: spin 10s linear infinite;
-    outline: 2px solid white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     left: 90%;
 }
@@ -294,7 +292,7 @@ label {
   line-height: 50px;;
 }
 br{
-    padding-bottom: 30px;
+    margin: 30px;
 }
 .text{
     padding-bottom: 30px;
@@ -302,7 +300,7 @@ br{
     margin-right: 40px;
 }
 
-button{
+.spotify-launcher{
     background-color: #8A9A5B;
     color: #fcfffa;
     font-family: 'Press Start 2P', cursive;
@@ -315,12 +313,12 @@ button{
     transition: all 0.3s ease;
 }
 
-button:hover{
+.spotify-launcher:hover{
     background-color: #c2d4a7;
     color: #fcfffa;
     transform: scale(1.1);
 }
-button:active {
+.spotify-launcher:active {
     transform: scale(1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
