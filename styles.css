@@ -92,20 +92,33 @@ body {
 }
 
 .rotating-img-right{
-    width: 400px; /* Adjust the size as needed */
-    top: 30%; /* Center the image vertically */
-    object-fit: cover; /* Maintain image proportions */
+    width: 400px;
+    top: 30%;
+    object-fit: cover;
     position: absolute;
-    animation: spin 10s linear infinite; /* Apply the animation */
+    animation: spin 10s linear infinite;
     right: 90%;
+    outline: 2px solid white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
  .rotating-img-left{
-    width: 400px; /* Adjust the size as needed */
-    top: 30%; /* Center the image vertically */
-    object-fit: cover; /* Maintain image proportions */
+    width: 400px;
+    top: 30%;
+    object-fit: cover;
     position: absolute;
-    animation: spin 10s linear infinite; /* Apply the animation */
+    animation: spin 10s linear infinite;
+    outline: 2px solid white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     left: 90%;
+}
+.rotating-img-right:hover,
+.rotating-img-left:hover{
+    transform: scale(1.2);
+}
+
+.rotating-img-right:active,
+.rotating-img-left:active{
+    transform: scale(1);
 }
 
 .spotify-player{
@@ -195,6 +208,8 @@ body {
     overflow: hidden;  /* Hide anything that goes outside the container */
     white-space: nowrap;  /* Prevent the text from wrapping to the next line */
     position: relative;
+    padding:0px;
+    margin: 0px;
 }
 
 
@@ -296,44 +311,3 @@ button:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Style the overlay (background) */
-        .overlay {
-            display: none; /* Hide the popup by default */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            z-index: 1000; /* Make sure it is on top of other content */
-        }
-
-        /* Style the pop-up content box */
-        .popup-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            width: 300px;
-            text-align: center;
-        }
-
-        /* Style the button inside the popup */
-        .close-btn {
-            margin-top: 10px;
-            padding: 10px;
-            background-color: red;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        /* Hover effect for the close button */
-        .close-btn:hover {
-            background-color: darkred;
-        }
