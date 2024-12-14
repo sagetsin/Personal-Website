@@ -163,7 +163,8 @@ body {
 
 .vinyl-button-left{
     cursor: pointer;
-    border: none !important;
+    background: none;
+    border: none;
     width:400px;
     height: 400px;
     left: 90%;
@@ -173,10 +174,8 @@ body {
 
 .vinyl-button-right{
     border: none;
-    background: transparent;
-    border: none !important;
+    background: none;
     cursor: pointer;
-    appearance: none;
     width:400px;
     height: 400px;
     right: 90%;
