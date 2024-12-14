@@ -17,7 +17,7 @@
             if(popupOpen){
                 window.close();
                 popupOpen = false;
-                left.setAttribute("class", "vinyl-left");
-                right.setAttribute("class", "vinyl-right");
+//                left.setAttribute("class", "vinyl-left");
+//                right.setAttribute("class", "vinyl-right");
             }
         }

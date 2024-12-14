@@ -162,10 +162,7 @@ body {
 }
 
 .vinyl-button-left{
-    border: none;
     cursor: pointer;
-    appearance: none;
-    background: transparent;
     border: none !important;
     width:400px;
     height: 400px;
