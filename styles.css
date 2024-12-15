@@ -20,6 +20,15 @@ html{
     cursor: url('./media/images/cursor.ico'), default;
 }
 
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr{
+    border: 2px solid #56463A;
+}
+
 .main-contents{
     display: flex;
     flex-direction: column;
@@ -415,10 +424,23 @@ br{
 }
 
 .proj-img{
-	width: 300px;
+	width: 500px;
 }
 
 .proj-demo{
-    width: 500px;
-    height: 300px;
+    width: 1000px;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.proj-title{
+  text-align: left;
+  font-family: 'Press Start 2P';
+  color: #fcfffa;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-decoration: none;
+  line-height: 1.6;
+  font-size: 2em;
 }
