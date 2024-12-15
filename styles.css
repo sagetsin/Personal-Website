@@ -191,7 +191,7 @@ br{
     height: 400px;
     left: 90%;
     top: 30%;
-    position: absolute;
+    background: transparent;
 }
 
 .vinyl-button-right{
@@ -201,9 +201,17 @@ br{
     height: 400px;
     right: 90%;
     top: 30%;
-    position: absolute;
+    background: transparent;
 }
 
+@keyframes spin {
+    from {
+        transform: rotate(0deg); /* Start at 0 degrees */
+    }
+    to {
+        transform: rotate(360deg); /* End at 360 degrees */
+    }
+}
 
 .spotify-player{
     display: flex;

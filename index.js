@@ -1,23 +1,23 @@
  // Get elements
-        var left = document.getElementById("vinyl-left");
-        var right = document.getElementById("vinyl-right");
+        const left = document.getElementById("vinyl-left");
+        const right = document.getElementById("vinyl-right");
         var popupOpen = false;
         let popupWindow;
 
         // Open the pop-up
         function openPopup() {
             if(!popupOpen || popupWindow.closed) {
+                left.style.animation = 'spin 10s linear infinite';
+                right.style.animation = 'spin 10s linear infinite';
                 popupWindow = window.open("https://sagetsin.github.io/main/pages/spotify-player.html", "Spotify Player", "width=500,height=300");
                 popupOpen = true;
-                left.style.animation = 'rotate-left';
-                right.style.animation = 'rotate-right';
             }
         }
 
         function closePopup(){
             console.log("time to close");
             if(popupWindow != null){
-            console.log("closing...");
+                console.log("closing...");
                 popupWindow.close();
                 popupWindow = null;
                 popupOpen = false;
