@@ -16,6 +16,10 @@ body {
   overflow-x: hidden;
 }
 
+html{
+    cursor: url('./media/images/cursor.ico'), default;
+}
+
 .main-contents{
     display: flex;
     flex-direction: column;
@@ -272,7 +276,7 @@ body {
    border-width: 0px;
    height: 5px;
    background-color: #fcfffa;
-   width: 40%;
+   width: 80%;
 }
 
 .top-fade{
@@ -343,6 +347,17 @@ h3 {
   margin-right: 30px;
 }
 
+h4{
+  color: #56463A;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 50px;
+  font-family: 'Roboto Flex';
+  font-weight: 700;
+  line-height: 50px;
+
+}
+
 p,
 .text,
 ul,
@@ -402,5 +417,10 @@ br{
 }
 
 .proj-img{
-	width: 100px;
+	width: 300px;
+}
+
+.proj-demo{
+    width: 500px;
+    height: 300px;
 }
