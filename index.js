@@ -11,6 +11,8 @@
                 popupOpen = true;
                 left.style.animation = "spin 10s linear infinite";
                 right.style.animation = "spin 10s linear infinite";
+                left.class = "rotate-left";
+                right.class = "rotate-right";
             }
         }
 

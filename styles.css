@@ -17,7 +17,7 @@ body {
 }
 
 html{
-    cursor: url('./media/images/cursor.ico'), default;
+    cursor: url('./media/icons/cursor.png'), default;
 }
 
 table{
@@ -81,6 +81,7 @@ tr{
 
 .nav:hover {
     background-color: #c2d4a7; /* Slightly lighter green for hover */
+    cursor: url('./media/icons/star.png'), default;
 }
 
 .pdf {
@@ -121,7 +122,7 @@ tr{
     position: absolute;
     animation: spin 10s linear infinite;
     left: 90%;
-    transition: transform 0.7s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .rotate-left:hover{
@@ -155,7 +156,8 @@ tr{
     object-fit: cover;
     position: absolute;
     right: 90%;
-    transition: transform 0.7s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    cursor: url('./media/icons/star.png'), default;
 }
 
 .vinyl-left{
@@ -164,7 +166,8 @@ tr{
     object-fit: cover;
     position: absolute;
     left: 90%;
-    transition: transform 0.7s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    cursor: url('./media/icons/star.png'), default;
 }
 
 .vinyl-left:hover{
@@ -175,7 +178,7 @@ tr{
 }
 
 .vinyl-button-left{
-    cursor: pointer;
+    cursor: url('./media/icons/star.png'), default;
     border: none;
     width:400px;
     height: 400px;
@@ -186,7 +189,7 @@ tr{
 
 .vinyl-button-right{
     border: none;
-    cursor: pointer;
+    cursor: url('./media/icons/star.png'), default;
     width:400px;
     height: 400px;
     right: 90%;
@@ -394,7 +397,7 @@ br{
     padding: 15px 30px;
     border: none;
     border-radius: 12px;
-    cursor: pointer;
+    cursor: url('./media/icons/star.png'), default;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
