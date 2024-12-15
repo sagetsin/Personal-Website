@@ -192,6 +192,7 @@ br{
     left: 90%;
     top: 30%;
     background: transparent;
+    position: absolute;
 }
 
 .vinyl-button-right{
@@ -202,6 +203,7 @@ br{
     right: 90%;
     top: 30%;
     background: transparent;
+    position: absolute;
 }
 
 @keyframes spin {
