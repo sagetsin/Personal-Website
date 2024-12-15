@@ -1,6 +1,5 @@
  // Get elements
-        const left = document.getElementById("vinyl-left");
-        const right = document.getElementById("vinyl-right");
+
         var popupOpen = false;
         let popupWindow;
 
@@ -8,14 +7,18 @@
         function openPopup() {
             if(!popupOpen || popupWindow.closed) {
             try{
-                left.style.animation = 'spin 10s linear infinite';
-                right.style.animation = 'spin 10s linear infinite';
+                document.getElementById('vinyl-left').style.animation = 'spin 10s linear infinite';
+                document.getElementById('vinyl-right').style.animation = 'spin 10s linear infinite';
             } catch(error){
                 console.error("This is null: ", error.message);
             }
                 popupWindow = window.open("https://sagetsin.github.io/main/pages/spotify-player.html", "Spotify Player", "width=500,height=300");
                 popupOpen = true;
             }
+        }
+
+        function activate() {
+          document.getElementById("vinyl-right2").style.animation = 'spin 10s linear infinite';
         }
 
         function closePopup(){
@@ -26,8 +29,8 @@
                 popupWindow = null;
                 popupOpen = false;
                 try{
-                    left.style.animation = 'none';
-                    right.style.animation = 'none';
+                    document.getElementById('vinyl-left').style.animation = 'none';
+                    document.getElementById('vinyl-right').style.animation = 'none';
                 } catch(error){
                     console.error("This is null: ", error.message);
                 }
