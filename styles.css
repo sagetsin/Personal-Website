@@ -27,6 +27,7 @@ table{
 
 tr{
     border: 2px solid #56463A;
+    text-align: center;
 }
 
 br{
@@ -456,4 +457,10 @@ br{
 
 .proj-title:hover{
     cursor: url('./media/icons/star.png'), default;
+}
+
+.proj-details{
+    display: block;
+    margin: 30px 30px 30px;
+    background-color: #8A9A5B;
 }
