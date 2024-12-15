@@ -7,8 +7,12 @@
         // Open the pop-up
         function openPopup() {
             if(!popupOpen || popupWindow.closed) {
+            try{
                 left.style.animation = 'spin 10s linear infinite';
                 right.style.animation = 'spin 10s linear infinite';
+            } catch(error){
+                console.error("This is null: ", error.message);
+            }
                 popupWindow = window.open("https://sagetsin.github.io/main/pages/spotify-player.html", "Spotify Player", "width=500,height=300");
                 popupOpen = true;
             }
@@ -21,8 +25,13 @@
                 popupWindow.close();
                 popupWindow = null;
                 popupOpen = false;
-                left.style.animation = 'none';
-                right.style.animation = 'none';
+                try{
+                    left.style.animation = 'none';
+                    right.style.animation = 'none';
+                } catch(error){
+                    console.error("This is null: ", error.message);
+                }
+
             }
 
 
