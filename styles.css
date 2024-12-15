@@ -30,6 +30,11 @@ tr{
     text-align: center;
 }
 
+td{
+    border-right: 2px solid #56463A;
+    border-left: 2px solid #56463A;
+}
+
 br{
     display:block;
     content:"";
@@ -448,10 +453,9 @@ br{
 }
 
 .proj-demo{
-    width: 1000px;
+    width: 85%;
     display: block;
     margin: 0 auto;
-    padding-bottom: 30px;
 }
 
 .proj-title{
