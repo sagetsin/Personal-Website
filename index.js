@@ -2,25 +2,30 @@
         var left = document.getElementById("vinyl-left");
         var right = document.getElementById("vinyl-right");
         var popupOpen = false;
-        let popupWindow = null;
+        let popupWindow;
 
         // Open the pop-up
         function openPopup() {
             if(!popupOpen || popupWindow.closed) {
                 popupWindow = window.open("https://sagetsin.github.io/main/pages/spotify-player.html", "Spotify Player", "width=500,height=300");
                 popupOpen = true;
-                left.classList.add("rotate-left");
-                right.classList.add("rotate-right");
+                left.style.animation = 'rotate-left';
+                right.style.animation = 'rotate-right';
             }
         }
 
         function closePopup(){
             console.log("time to close");
-            popupWindow.close();
-            popupWindow = null;
-            popupOpen = false;
-            left.classList.add("vinyl-left");
-            right.classList.add("vinyl-right");
+            if(popupWindow != null){
+            console.log("closing...");
+                popupWindow.close();
+                popupWindow = null;
+                popupOpen = false;
+                left.style.animation = 'none';
+                right.style.animation = 'none';
+            }
+
+
         }
 
         //Sparkles
