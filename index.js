@@ -15,6 +15,7 @@
         }
 
         function closePopup(){
+        console.log("attemping to close");
             if(popupOpen && !popupWindow.closed){
                 popupWindow.close();
                 popupWindow = null;

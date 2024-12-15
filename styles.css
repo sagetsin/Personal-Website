@@ -167,7 +167,6 @@ html{
 
 .vinyl-button-left{
     cursor: pointer;
-    background: none;
     border: none;
     width:400px;
     height: 400px;
@@ -178,7 +177,6 @@ html{
 
 .vinyl-button-right{
     border: none;
-    background: none;
     cursor: pointer;
     width:400px;
     height: 400px;
