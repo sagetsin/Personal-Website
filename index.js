@@ -9,21 +9,20 @@
             if(!popupOpen || popupWindow.closed) {
                 popupWindow = window.open("https://sagetsin.github.io/main/pages/spotify-player.html", "Spotify Player", "width=500,height=300");
                 popupOpen = true;
-                left.style.animation = "spin 10s linear infinite";
-                right.style.animation = "spin 10s linear infinite";
                 left.class = "rotate-left";
                 right.class = "rotate-right";
             }
         }
 
         function closePopup(){
-        console.log("attemping to close");
+        console.log("attempting to close");
             if(popupOpen && !popupWindow.closed){
+            console.log("time to close");
                 popupWindow.close();
                 popupWindow = null;
                 popupOpen = false;
-                left.style.animation = "none";
-                right.style.animation = "none";
+                left.class = "vinyl-left";
+                right.class = "vinyl-right";
 
             }
         }

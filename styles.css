@@ -451,5 +451,9 @@ br{
   margin-right: 30px;
   text-decoration: none;
   line-height: 1.6;
-  font-size: 2em;
+  font-size: 1.5em;
+}
+
+.proj-title:hover{
+    cursor: url('./media/icons/star.png'), default;
 }
