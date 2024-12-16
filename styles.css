@@ -118,50 +118,6 @@ br{
     justify-content: center;
 }
 
-.rotate-right{
-    width: 400px;
-    top: 30%;
-    object-fit: cover;
-    position: absolute;
-    animation: spin 10s linear infinite;
-    right: 90%;
-    transition: transform 0.7s ease-in-out;
-}
- .rotate-left{
-    width: 400px;
-    top: 30%;
-    object-fit: cover;
-    position: absolute;
-    animation: spin 10s linear infinite;
-    left: 90%;
-    transition: transform 0.3s ease-in-out;
-}
-
-.rotate-left:hover{
-    transform: scale(1.2);
-}
-.rotate-right:hover{
-    transform: scale(1.2);
-}
-
-/*#vinyl-left{
-    width: 400px;
-    top: 30%;
-    object-fit: cover;
-    position: absolute;
-    left: 90%;
-    transition: transform 0.7s ease-in-out;
-}
-
-#vinyl-right{
-    width: 400px;
-    top: 30%;
-    object-fit: cover;
-    position: absolute;
-    right: 90%;
-    transition: transform 0.7s ease-in-out;
-}*/
-
 .vinyl-right{
     width: 400px;
     top: 30%;
@@ -169,7 +125,6 @@ br{
     position: absolute;
     right: 90%;
     transition: transform 0.3s ease-in-out;
-    cursor: url('./media/icons/star.png'), default;
 }
 
 .vinyl-left{
@@ -179,7 +134,6 @@ br{
     position: absolute;
     left: 90%;
     transition: transform 0.3s ease-in-out;
-    cursor: url('./media/icons/star.png'), default;
 }
 
 .vinyl-left:hover{
