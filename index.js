@@ -21,10 +21,10 @@
           document.getElementById("vinyl-left").style.animation = 'none';
         }
 
-        window.addEventListener('beforeunload', function(event) {
+        popupWindow.addEventListener('beforeunload', function(event) {
             console.log('Window is closing...');
-            document.getElementById("vinyl-right").style.animation = 'none';
-            document.getElementById("vinyl-left").style.animation = 'none';
+            window.document.getElementById("vinyl-right").style.animation = 'none';
+            window.document.getElementById("vinyl-left").style.animation = 'none';
             popupOpen = false;
 
         })
