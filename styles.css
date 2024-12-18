@@ -65,6 +65,23 @@ br{
     padding-left: 0px;
 }
 
+.quick-links{
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    height: 100px;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
 .logo{
   height: 180px;
   margin-top: 10px;
@@ -410,6 +427,7 @@ br{
     width: 85%;
     display: block;
     margin: 0 auto;
+    padding-top: 20px;
 }
 
 .proj-title{
@@ -420,7 +438,7 @@ br{
   margin-right: 30px;
   text-decoration: none;
   line-height: 1.6;
-  font-size: 1.5em;
+  font-size: 1 em;
 }
 
 .proj-title:hover{

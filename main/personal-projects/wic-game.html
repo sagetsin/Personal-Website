@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sydney | WiC Arcade RPG</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="icon" type="image/x-icon" href="../../media/icons/favicon.ico">
+    <script src="../../index.js"></script>
+</head>
+<body>
+<div class="main-contents">
+    <header class="header">
+        <img src="../../media/images/logo.png" class="logo" alt="logo">
+        <a class="nav" href="../..">Home</a>
+        <a class="nav" href="../pages/about.html">About me</a>
+        <a class="nav" href="../pages/personal-proj.html">Personal Projects</a>
+        <a class="nav" href="../pages/resume.html">Resume</a>
+        <a class="nav" href="../pages/art-portfolio.html">Art Portfolio</a>
+        <a class="nav" href="../pages/articles.html">Articles</a>
+        <a class="nav" href="https://www.linkedin.com/in/sydney-tsin/" target="_blank">LinkedIn</a>
+    </header>
+    <div class="rectangle">
+        <div class="top-fade">
+            <h1>PERSONAL PROJECTS</h1>
+        </div>
+        <div class="contents">
+            <h2>WiC RPG Arcade Game Cabinet</h2>
+            <hr class="horizontal-line">
+            <p class="text" style="color: #fcfffa">
+                Date: September 2024 - December 2024 | Author(s): WiC Projects Team
+            </p>
+            <p class="text" style="color: #fcfffa">
+                The WiC RPG Arcade Game was created by the WiC Projects Team of Fall 2024 for the arcade cabinet in the WiC space.
+                This RPG has a cat character that explores different areas associated with RIT's identity. Some of these areas
+                include the National Technical Institute of the Deaf (NTID), the Golisano College of Computing and Information Science
+                Building (GCCIS), Wallace Library, and others. I worked on the NTID level with Natalie Zesch and Claire O'Farrell.
+            </p>
+            <a class="text" style="color: #fcfffa" href="https://github.com/Women-in-Computing-at-RIT/WiC_Projects_RPG">Link to WiG RPG in Github</a>
+            <video class="proj-demo" autoplay muted controls>
+                <source src="../../media/demos/wic-ntid-demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>Demo of NTID level.</p>
+            <div class="proj-details">
+                <p class="text" style="color: #fcfffa">
+                    Languages and tools used: Godot, Git, GDScript, Procreate
+                </p>
+            </div>
+            <div class="text">
+                The game for the NTID level was matching the ASL alphabet hand sign to the letter to spell out
+                a word associated with NTID or RIT. This is a simple and fun game that can help the player learn
+                and understand ASL.
+                <br>
+                The ASL alphabet is the foundation to learning ASL. The National Institute for the Deaf (NTID) is the world's largest
+                technological college for deaf and hard-of-hearing students in the world, and is located at our very own
+                Rochester Institute of Technology. NTID offers associate, bachelor's, and master's degrees in more than 200 programs
+                offered by RIT, along with one of the most accessible education communities in the world for deaf and hard-of hearing
+                students. AAudiology and speech language services and cutting-edge accessibility solutions are available,
+                along with accessible facilities and an inclusive community.
+                <h4>Concept Development</h4>
+                There were several concepts we were deciding between for the game for the NITD level. We wanted it to have some
+                aspects of the deaf-community while also being informational. At first, we wanted to have the letters given
+                then have them try to choose the ASL letters to match. If we had more time, that could be plausible, but
+                it would also take some time to draw all the hand signs.
+                <br>
+                The game would start with the player talking to an interpreter who would explain the rules of the game.
+                Once the player "talked" with the interpreter, then the puzzle would appear and the player could use WASD
+                to move and the space bar to change between letters. Since it is for an arcade game, we didn't incorporate any
+                logic that would require clicking with a mouse.
+                <br>
+                If the configuration was incorrect then the interpreter would not let you pass. If it was correct, then the
+                barrier would open to the next level and you would be able to move on. We planned on having 5 or so levels, but due
+                to time constraints, we were only able to fully flesh out two. In the future, we hope to develop this game further
+                and incorporate more features and levels.
+                <br>
+                <h4>Designing the Game</h4>
+                Some of the features we needed to create was the interpreter and hiding the puzzle until they arrive, the text
+                dialog for the interpreter, puzzle configurations and verification, and moving to other levels.
+                <br><strong>Hiding the Puzzle</strong>
+                The way we did this was just having the visibility turned off until the player entered the collision shape
+                of the interpreter and pressed space. This is just a stop-gap until we incorporate the dialog that was developed
+                in a separate branch.
+                <br><strong>Text Dialog</strong>
+                The text dialog was created by one of my teammates, so I am not familiar with how she worked it out. But it
+                works as expected.
+                <br><strong>Puzzle Configurations and Verification</strong>
+                The state was measured by the frame the sprite was on for an animated sprite. If the state was correct for
+                each box, then when the player went to the interpreter to verify, it would let them pass. Otherwise, it would
+                not do anything. The functionality we want to implement is that it will give you a hint and tell you that your
+                configuration is wrong.
+                <br><strong>Moving to other levels</strong>
+                We had hoped to have more levels but two are fleshed out right now. There is a barrier preventing the player from
+                moving on until they have verified their solution with the interpreter. An arrow appears to direct the player
+                to the right exit as well. After the player exits the screen, a fade to black animation plays and the player
+                appears at the opposite end of the next level and the interpreter is there too.
+                <h4>Visuals</h4>
+                The TileMap, Player, and interpreter were provided with the texture pack we were provided. The only other
+                graphics that we needed to create were the arrow, hand signs, and letters. Natalie Zesch created the letters.
+                <img class="article-img" src="../../media/images/wic-alphabet.png" alt="alphabet">
+                I drew the hand signs.
+                <img class="article-img" src="../../media/images/wic-asl.png" alt="asl">
+                <h4>Challenges we Encountered</h4>
+                We had an impossible time trying to figure out the TileMaps. It was all glitched out and weird for a very long
+                time. I tried to use the bitmap from the grass and that may have been why it wasn't working. I had to manually
+                configure the grid and afterward we were able to create a cohesive map.
+                <br>
+                It was also challenging to figure out the fade to black since I never dealt with CanvasLayers. It still is
+                not working exactly as intended since the animation isn't long enough for the time it takes for the player
+                to get to the other side of the map.
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

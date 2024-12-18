@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sydney | Wizard Battle</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="icon" type="image/x-icon" href="../../media/icons/favicon.ico">
+    <script src="../../index.js"></script>
+</head>
+<body>
+<div class="main-contents">
+    <header class="header">
+        <img src="../../media/images/logo.png" class="logo" alt="logo">
+        <a class="nav" href="../..">Home</a>
+        <a class="nav" href="../pages/about.html">About me</a>
+        <a class="nav" href="../pages/personal-proj.html">Personal Projects</a>
+        <a class="nav" href="../pages/resume.html">Resume</a>
+        <a class="nav" href="../pages/art-portfolio.html">Art Portfolio</a>
+        <a class="nav" href="../pages/articles.html">Articles</a>
+        <a class="nav" href="https://www.linkedin.com/in/sydney-tsin/" target="_blank">LinkedIn</a>
+    </header>
+    <div class="rectangle">
+        <div class="top-fade">
+            <h1>PERSONAL PROJECTS</h1>
+        </div>
+        <div class="contents">
+            <h2>Wizard Battle</h2>
+            <hr class="horizontal-line">
+            <p class="text" style="color: #fcfffa">
+                Date: April 2023 | Author(s): Sydney Tsin
+            </p>
+            <p class="text" style="color: #fcfffa">
+                Wizard Battle is a Game that allows a <code>Player</code> to play a <code>Wizard</code> and unlock three
+                other
+                <code>Wizards</code> to fight off <code>Monsters</code> in a turn-based RPG-style battle. There are
+                three
+                types of <code>Monsters</code>
+                from level 1 to level 3 difficulty and the final boss.
+            </p>
+            <a class="text" style="color: #fcfffa" href="https://github.com/sagetsin/Wizard-Battle">Link to Wizard Battle in Github</a>
+            <video class="proj-demo" autoplay muted controls>
+                <source src="../../media/demos/wizard-battle-demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>Demo of Wizard Battle in JApplet.</p>
+            <div class="proj-details">
+                <p class="text" style="color: #fcfffa">
+                    Languages and tools used: JApplet, BlueJ, Java, Procreate
+                </p>
+            </div>
+            <div class="text">
+                A <code>Player</code> can increase the level of a <code>Wizard</code> by +1 after defeating three level
+                1 <code>Monsters</code> defeating
+                two level 2 <code>Monsters</code> , or one level 3 Monster. Each <code>Monster</code> has its own
+                vulnerabilities to certain
+                elemental types and resistances. A <code>Player</code> can take a possibility of 6 actions during a
+                battle: swap
+                <code>Wizard</code>, check vulnerability, check resistance, use a special skill, skip a turn, or
+                forfeit;
+                however, they can only choose one. The <code>Monster</code> will still attack regardless of the action
+                they take
+                during their turn. They can also use their special skill which will cause a <code>Monster</code> to be
+                vulnerable
+                to a specific element at level 4. When hit with an elemental type a <code>Monster</code> is vulnerable
+                to, they
+                will deal double damage. When hit with an elemental type a <code>Monster</code> is resistant to, they
+                will deal
+                half damage.
+                <br>
+                A <code>Wizard</code> can have a level from 1-5. Each <code>Wizard</code> can cast <code>Spells</code>
+                of a specific elemental type. Each
+                wizard has three <code>Spells</code>: a level 1 Spell, a level 2 Spell, and a level 3 <code>Spell</code>.
+                The <code>Player</code> has
+                access to their level 1 <code>Spell</code> from levels 1-5, level 2 <code>Spells</code> from 2-5, and
+                level 3 <code>Spells</code> from 4-5.
+                A <code>Wizard</code> can only cast a level 3 <code>Spell</code> twice per battle, a level 2
+                <code>Spell</code> three times per battle, and
+                a level 1 <code>Spell</code> as many times as they want. The <code>Spells</code> are stored in a
+                type-specific ArrayList
+                called SpellBook and will reset every time a new <code>Battle</code> starts. The ArrayList will contain
+                the
+                number of level 2 and level 3 <code>Spells</code> that the <code>Player</code> is allowed to use that
+                round. If the player has
+                not unlocked level 3 <code>Spells</code>, then there will be no level 3 <code>Spells</code> in the
+                ArrayList. Since the <code>Player</code>
+                can use as many level 1 <code>Spells</code> as they want, they are not included in the ArrayList. I will
+                use
+                sequential search to locate and remove the proper <code>Spell</code> from the ArrayList. Damage will be
+                calculated using the random() method from the Math Class and will be stored in the <code>Wizard</code>
+                class.
+
+                <br>
+                A <code>Player</code> will fight 10 battles of <code>Monsters</code> before reaching the final boss. A
+                player may deploy one
+                <code>Wizard</code> at a time and will fight against a maximum of three <code>Monsters</code> at a time.
+                The <code>Battle</code> class will
+                contain information about the levels and if the <code>Player</code> knows any of the vulnerabilities or
+                weaknesses of any of the deployed <code>Monsters</code> . If the <code>Player</code> knows any of the
+                vulnerabilities of the
+                <code>Monsters</code> on the Field, The <code>Battle</code> class will contain an array of booleans
+                which will be true if the
+                <code>Player</code> is on that level and will turn false after they beat it. The battle will loop
+                switching
+                between who’s turn it is during the battle until all <code>Monsters</code> or all <code>Wizards</code>
+                are dead. The <code>Wizards</code>
+                that are not being used have their HP (hit points) while another <code>Wizard</code> is deployed but
+                their level
+                does not increase. If a <code>Player</code> has found out the vulnerabilities or resistances of a <code>Monster</code>
+                during
+                a previous level, they will be notified before the battle starts and before they choose their Wizard
+                to deploy to battle. If a <code>Wizard</code> dies in battle they will be able to be revived once per
+                round. If a
+                <code>Wizard</code> falls, the <code>Player</code> can choose to revive the <code>Wizard</code> to full
+                health and continue the battle
+                where they left off or deploy a different Wizard. The final boss battle will allow the
+                <code>Player</code> to
+                deploy all <code>Wizards</code> at full health and at the levels they finished at. The final boss does
+                not have
+                any vulnerabilities and will have increased HP and attack damages. Defeating the final boss will
+                result in a win and the game will end.
+
+
+                <br>
+                <h4>Class Descriptions</h4>
+                <code>Character</code> is an interface that has the methods for a <code>Wizard</code> and a Monster.
+                <br>
+                A <code>Wizard</code> is a class that implements the Character interface. A <code>Wizard</code> has an
+                HP,
+                elemental class,
+                level, <code>Spells</code>, life status, special skill, <code>Spell</code> slots, and deployed status.
+                There are four
+                elemental classes for each Wizard: fire, ice, necrotic, and radiant. The starter <code>Wizard</code>
+                will be a
+                fire elemental, second ice, third necrotic, and fourth radiant. A <code>Wizard</code> can have a level
+                from 1-5
+                (HP scaling in the table below). Every time a <code>Wizard</code> drops a Monster’s HP to 0, their level
+                increases based on the chart below. Every time a <code>Wizard</code> is hit, they take damage and it is
+                subtracted from their total HP. If a Wizard’s HP drops to 0, their life status is changed and they
+                can revive a <code>Wizard</code> once every battle. If they have already revived a <code>Wizard</code>
+                during that battle,
+                they will no longer be able to deploy that <code>Wizard</code> until the next battle. At the final
+                battle, all
+                four <code>Wizards</code> will be deployed at full health and will fight at whatever level the <code>Player</code>
+                increased
+                them by. A <code>Wizard</code> can only cast a level 3 <code>Spell</code> twice per battle, a level 2
+                <code>Spell</code> three times per
+                battle, and a level 1 <code>Spell</code> as many times as they want.
+
+                <br>
+                A <strong>Spell</strong> has an elemental type, max and min damage, and level. <code>Spells</code> can
+                have a
+                level 1-3. The
+                damage range of <code>Spells</code> is specified in the tables below. A <code>Spell</code> can have an
+                elemental type of fire,
+                ice, necrotic, and radiant.
+                <br>
+                A <code>Monster</code> has a level, vulnerability, resistance, HP, attacks, life status, and deployed
+                status. A
+                <code>Monster</code> can have a level of 1-3 except for the final boss which has a level of 10 (HP
+                scaling in the
+                table below). A <code>Monster</code> will also have 1 vulnerability and 1 resistance (specified in the
+                table
+                below). If a <code>Monster</code> is hit with an attack with an elemental type they are vulnerable to,
+                they will
+                receive double damage. If a <code>Monster</code> is hit with an attack with an elemental type they are
+                resistant
+                to, they will receive half the damage. The <code>Player</code> is not notified if a <code>Monster</code>
+                is hit with an attack
+                they are vulnerable or resistant to unless they use their action to check it. If a Monster’s HP
+                drops to 0, its life status and deployed status are updated and the <code>Player</code>’s level is
+                increased
+                accordingly (HP and level increase specified below). The <code>Monster</code> will attack the active
+                <code>Wizard</code> after
+                the <code>Player</code> takes an action regardless of what action they take (attack scaling specified in
+                the
+                table below). A <code>Monster</code> does not have an elemental attack type and only does basic slashing
+                attacks.
+
+                <br>
+                The <code>Player</code> has a type-specific ArrayList of <code>Wizards</code> . The <code>Player</code>
+                will start off with one fire-type
+                <code>Wizard</code> and will gain a second, third, and fourth <code>Wizard</code> in their corresponding
+                levels. A <code>Player</code> can
+                deploy only one <code>Wizard</code> at a time until the final battle. A <code>Player</code> can take 6
+                actions during a
+                battle: swap Wizard, check vulnerability, check resistance, use special skill, skip a turn, or
+                forfeit. The <code>Monster</code> will still attack regardless of the action they take during their
+                turn.
+                <br>
+                The <code>Battle</code> class contains a level, number of <code>Monsters</code> , turn, vulnerabilities
+                and resistances pop-up,
+                end battle variable, and defeated variable. The levels can go from 1-11, 11 being the final boss,
+                and after the game would end. If the <code>Player</code> loses all <code>Wizards</code> during a battle
+                the game will end and
+                the <code>Player</code> can choose to start again. There should also be a pop-up notification every time
+                a battle
+                starts that indicates the vulnerabilities and resistances of each <code>Monster</code> type on the
+                battlefield if
+                the <code>Player</code> has already used it on that specific <code>Monster</code> before. There should
+                also be a certain
+                amount of <code>Monsters</code> on each level 1-3 <code>Monsters</code> from levels 1-3 (specified in
+                the table below) in
+                levels 1-10. Level 11 will contain the final boss who has a level 10. Players and <code>Monsters</code>
+                take
+                turns. A <code>Player</code> always starts a battle and can choose from their 6 options. A
+                <code>Monster</code> will always
+                attack its turn. If all the <code>Monsters</code> have been defeated then the end battle variable will
+                be true
+                and the next <code>Battle</code> will begin. If the <code>Player</code>’s <code>Wizards</code> have been
+                defeated, then the defeated
+                variable will be set to true, and the game will end and ask the <code>Player</code> if they want to
+                start again
+                from level 1.
+                <br>
+                <h4>Method Descriptions</h4>
+                <strong>List of Methods in Character Interface:</strong>
+                <ol>
+                    <li><code>int attack()</code> - returns damage of the attack.</li>
+                    <li><code>boolean isDeployed()</code> - true if the Character is on the battlefield and false if
+                        they are not. If this is false at the end of the battle then their full HP will be restored.
+                    </li>
+                    <li><code>boolean isAlive()</code> - true if the Character is on the battlefield and still alive or
+                        resting and still alive. False if the Character’s HP is 0.
+                    </li>
+                    <li><code>int getHP()</code> - returns the current Character’s HP (cannot be below 0).</li>
+                    <li><code>void setHP(int health)</code> - sets the new HP of the current Character (cannot be
+                        greater than the max HP for their level).
+                    </li>
+                    <li><code>int getLevel()</code> - returns the current Character’s level.</li>
+                    <li><code>void setLevel(int level)</code> - sets the level to the integer provided (cannot be
+                        greater than 5 or less than 1 for <code>Wizard</code> or greater than 3 or less than 1 for
+                        Monster).
+                    </li>
+                </ol>
+                <br>
+                <strong>List of Methods in the Wizard Class:</strong>
+                <ol>
+                    <li><code>void showSpells()</code> - prints out the <code>Spells</code> the <code>Wizard</code>
+                        currently has access to.
+                    </li>
+                    <li><code>boolean specialSkillUnlocked()</code> - true if the <code>Wizard</code> is level 4 or
+                        higher. False if they are level 3 or below.
+                    </li>
+                    <li><code>void setSpellSlots(int level, int SpellSlots)</code> - sets the number of spell slots for
+                        the given level.
+                    </li>
+                    <li><code>int getWizardNum()</code> - returns the number associated with the elemental
+                        <code>Wizard</code>.
+                    </li>
+                    <li><code>String getElement()</code> - returns the element associated with the <code>Wizard</code>.
+                    </li>
+                </ol>
+                <br>
+                <strong>List of Methods in Spell Class:</strong>
+                <ol>
+                    <li><code>String getElement()</code> - returns the element of the <code>Spell</code>.</li>
+                    <li><code>int getLevel()</code> - returns the Spell’s level.</li>
+                    <li><code>int getMax()</code> - returns the max value of the <code>Spell</code>.</li>
+                    <li><code>int getMin()</code> - returns the min value of the <code>Spell</code>.</li>
+                    <li><code>void setMax(int m)</code> - sets the max value of the <code>Spell</code>.</li>
+                    <li><code>void setMin(int m)</code> - sets the min value of the <code>Spell</code>.</li>
+                </ol>
+                <br>
+                <strong>List of Methods in the Monster Class:</strong>
+                <ol>
+                    <li><code>boolean vKnown()</code> - returns true if the <code>Player</code> knows the vulnerability
+                        of this level Monster. Otherwise, returns false.
+                    </li>
+                    <li><code>boolean rKnown()</code> - returns true if the <code>Player</code> knows the resistance of
+                        this level Monster. Otherwise, returns false.
+                    </li>
+                    <li><code>String getVulnerable()</code> - returns the vulnerability of the current Monster.</li>
+                    <li><code>String getResistant()</code> - returns the resistance of the current Monster.</li>
+                </ol>
+                <br>
+                <strong>List of Methods in the Player Class:</strong>
+                <ol>
+                    <li><code>ArrayList getWizards()</code> - returns the list of <code>Wizards</code> the
+                        <code>Player</code> currently has access to. Excludes <code>Wizards</code> that are not unlocked
+                        or are dead.
+                    </li>
+                    <li><code>Wizard activeWizard(int num)</code> - returns the deployed <code>Wizard</code>.</li>
+                    <li><code>void addWizard(Wizard w)</code> - will add a <code>Wizard</code> to the
+                        <code>Player</code>’s <code>ArrayList</code> of <code>Wizards</code> .
+                    </li>
+                </ol>
+                <br>
+                <strong>List of Methods in Battle Class:</strong>
+                <ol>
+                    <li><code>boolean specialSkillAvailable()</code> - false if the special skill has been used already
+                        in this battle or if the deployed <code>Wizard</code> is below level 4. True if it has not been
+                        used and can be by the deployed <code>Wizard</code>.
+                    </li>
+                    <li><code>boolean reviveAvailable()</code> - false if the revive has already been used once this
+                        battle. True if it is still available in this battle. Will be set to true after continuing to
+                        the next battle.
+                    </li>
+                    <li><code>int switchWizard(int x)</code> - Fire <code>Wizard</code> has an integer of 0, Ice - 1,
+                        Necrotic - 2, and Radiant - 3. Whichever number is passed through.
+                    </li>
+                    <li><code>boolean turn()</code> - true if it is the <code>Player</code>’s turn and false if it is
+                        the Monster’s turn.
+                    </li>
+                    <li><code>boolean won()</code> - true if either the <code>Monster</code> or <code>Player</code> won.
+                    </li>
+                    <li><code>boolean victor()</code> - true if <code>Player</code> won, false if <code>Monster</code>
+                        won. If <code>Monster</code> won, the <code>Player</code> would have the option to start from
+                        the beginning. If the <code>Player</code> won, automatically moves on to the next level.
+                    </li>
+                    <li><code>int getLevel()</code> - returns current battle level 1-11.</li>
+                </ol>
+                <h4>Important Information Tables</h4>
+                <br>
+                <strong>Spells and Spell Damage for each Element and Level</strong>
+                <table>
+                    <tr>
+                        <th>Level</th>
+                        <th>Fire</th>
+                        <th>Ice</th>
+                        <th>Necrotic</th>
+                        <th>Radiant</th>
+                        <th>Damage Range</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Firebolt</td>
+                        <td>Cone of Cold</td>
+                        <td>Bestow Curse</td>
+                        <td>Sacred Flame</td>
+                        <td>1-6</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Hellish Rebuke</td>
+                        <td>Sleet Storm</td>
+                        <td>Blight</td>
+                        <td>Moonbeam</td>
+                        <td>2-12</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Fireball</td>
+                        <td>Blizzard</td>
+                        <td>Hallow</td>
+                        <td>Holy Aura</td>
+                        <td>6-18</td>
+                    </tr>
+                </table>
+                <br>
+                <strong>Monster Level, Vulnerabilities, and Resistances</strong>
+                <table>
+                    <tr>
+                        <th>Level</th>
+                        <th>Vulnerability</th>
+                        <th>Resistance</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Fire</td>
+                        <td>Ice</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ice</td>
+                        <td>Necrotic</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Radiant</td>
+                        <td>Fire</td>
+                    </tr>
+                </table>
+                <br>
+
+                <strong>Player level and HP</strong>
+                <table>
+                    <tr>
+                        <th>Level</th>
+                        <th>HP</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>34</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>46</td>
+                    </tr>
+                </table>
+                <br>
+                <strong>Monster level and HP</strong>
+                <table>
+                    <tr>
+                        <th>Level</th>
+                        <th>HP</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>Final boss</td>
+                        <td>70</td>
+                    </tr>
+                </table>
+                <br>
+                <strong>Player level increase based on Monsters Killed</strong>
+                <table>
+                    <tr>
+                        <th>Monster Level</th>
+                        <th>Number of Monsters</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+                <br>
+                <strong>Number and Max Level of Monsters per Battle based on Battle Level</strong>
+                <table>
+                    <tr>
+                        <th>Level</th>
+                        <th>Number of Monsters</th>
+                        <th>Max level of Monsters</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>1</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>3</td>
+                    </tr>
+                </table>
+                <br>
+                <strong>Monster Level and attack damage range</strong>
+                <table>
+                    <tr>
+                        <th>Level</th>
+                        <th>Damage range</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1-3</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>1-5</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>2-10</td>
+                    </tr>
+                    <tr>
+                        <td>Final Boss</td>
+                        <td>6-20</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
