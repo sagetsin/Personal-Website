@@ -150,7 +150,7 @@ br{
     height: 400px;
     left: 90%;
     top: 30%;
-    /* background: transparent;*/
+    background: transparent;
     position: absolute;
 }
 
@@ -161,7 +161,7 @@ br{
     height: 400px;
     right: 90%;
     top: 30%;
-   /* background: transparent;*/
+   background: transparent;
     position: absolute;
 }
 
