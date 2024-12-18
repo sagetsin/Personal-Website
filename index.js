@@ -9,13 +9,7 @@
                 popupWindow = window.open("https://sagetsin.github.io/main/pages/spotify-player.html", "Spotify Player", "width=500,height=300");
                 popupOpen = true;
             }
-            popupWindow.addEventListener('beforeunload', function(event) {
-                        console.log('Window is closing...');
-                        window.document.getElementById("vinyl-right").style.animation = 'none';
-                        window.document.getElementById("vinyl-left").style.animation = 'none';
-                        popupOpen = false;
 
-                    });
         }
 
         function activate() {
@@ -28,7 +22,13 @@
           window.document.getElementById("vinyl-left").style.animation = 'none';
         }
 
+window.addEventListener('beforeunload', function(event) {
+                        console.log('Window is closing...');
+                        window.document.getElementById("vinyl-right").style.animation = 'none';
+                        window.document.getElementById("vinyl-left").style.animation = 'none';
+                        popupOpen = false;
 
+                    });
 
         function closePopup(){
             console.log("time to close");
