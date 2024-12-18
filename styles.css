@@ -410,10 +410,8 @@ br{
 .grid-item {
   display:flex;
   flex-direction: column;
-  padding: 20px;
   font-size: 30px;
   text-align: left;
-  align-items: center;
   margin:20px;
 }
 
