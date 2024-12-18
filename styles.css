@@ -134,7 +134,7 @@ br{
     width: 400px;
     top: 30%;
     object-fit: cover;
-    position: absolute;
+    position: sticky;
     right: 90%;
     transition: transform 0.3s ease-in-out;
 }
@@ -143,7 +143,7 @@ br{
     width: 400px;
     top: 30%;
     object-fit: cover;
-    position: absolute;
+    position: sticky;
     left: 90%;
     transition: transform 0.3s ease-in-out;
 }
@@ -163,7 +163,7 @@ br{
     left: 90%;
     top: 30%;
     background: transparent;
-    position: absolute;
+    position: sticky;
 }
 
 .vinyl-button-right{
@@ -174,7 +174,7 @@ br{
     right: 90%;
     top: 30%;
    background: transparent;
-    position: absolute;
+    position: sticky;
 }
 
 @keyframes spin {

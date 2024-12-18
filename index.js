@@ -24,8 +24,8 @@
         }
 
         function stop(){
-          document.getElementById("vinyl-right").style.animation = 'none';
-          document.getElementById("vinyl-left").style.animation = 'none';
+          window.document.getElementById("vinyl-right").style.animation = 'none';
+          window.document.getElementById("vinyl-left").style.animation = 'none';
         }
 
 
