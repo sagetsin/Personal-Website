@@ -451,6 +451,7 @@ br{
 }
 
 .contact-but{
+    text-decoration: none;
     background-color: #e07ea7;
     color: #fcfffa;
     font-family: 'Press Start 2P', cursive;
@@ -462,8 +463,8 @@ br{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     position: fixed;
-    bottom: 0.1;
-    right: 0.1;
+    bottom: 0;
+    right: 0;
 }
 
 .contact-but:hover{
@@ -474,4 +475,16 @@ br{
 .contact-but:active {
     transform: scale(1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.contact-img{
+    width: 700px;
 }
