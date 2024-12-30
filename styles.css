@@ -331,6 +331,10 @@ h2 {
   line-height: 1.6;
 }
 
+.article-title:hover{
+    cursor: url('./media/icons/star.png'), default;
+}
+
 h3 {
   font-family: 'Pixelify Sans';
   font-size: 2.5em;
@@ -447,7 +451,7 @@ br{
 }
 
 .contact-but{
-    background-color: #8A9A5B;
+    background-color: #e07ea7;
     color: #fcfffa;
     font-family: 'Press Start 2P', cursive;
     font-size: 18px;
@@ -458,12 +462,12 @@ br{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 0.1;
+    right: 0.1;
 }
 
 .contact-but:hover{
-    background-color: #c2d4a7;
+    background-color: #eaadc6;
     color: #fcfffa;
     transform: scale(1.1);
 }
