@@ -1,46 +1,46 @@
- // Get elements
+var popupOpen = false;
+let popupWindow;
 
-        var popupOpen = false;
-        let popupWindow;
+// Open the pop-up
+function openPopup() {
+    if(!popupOpen || popupWindow.closed) {
+        popupWindow = window.open("https://sagetsin.github.io/main/pages/spotify-player.html",
+         "Spotify Player",
+          "width=500,height=300");
+        popupOpen = true;
+    }
+}
 
-        // Open the pop-up
-        function openPopup() {
-            if(!popupOpen || popupWindow.closed) {
-                popupWindow = window.open("https://sagetsin.github.io/main/pages/spotify-player.html", "Spotify Player", "width=500,height=300");
-                popupOpen = true;
-            }
+function activate() {
+    document.getElementById("vinyl-right").style.animation = 'spin 10s linear infinite';
+    document.getElementById("vinyl-left").style.animation = 'spin 10s linear infinite';
+}
 
-        }
-
-        function activate() {
-          document.getElementById("vinyl-right").style.animation = 'spin 10s linear infinite';
-          document.getElementById("vinyl-left").style.animation = 'spin 10s linear infinite';
-        }
-
-        function stop(){
-          window.document.getElementById("vinyl-right").style.animation = 'none';
-          window.document.getElementById("vinyl-left").style.animation = 'none';
-        }
+function stop(){
+    window.document.getElementById("vinyl-right").style.animation = 'none';
+    window.document.getElementById("vinyl-left").style.animation = 'none';
+}
 
 window.addEventListener('beforeunload', function(event) {
-                        console.log('Window is closing...');
-                        window.document.getElementById("vinyl-right").style.animation = 'none';
-                        window.document.getElementById("vinyl-left").style.animation = 'none';
-                        popupOpen = false;
+    console.log('Window is closing...');
+    window.document.getElementById("vinyl-right").style.animation = 'none';
+    window.document.getElementById("vinyl-left").style.animation = 'none';
+     popupOpen = false;
+});
 
-                    });
+function closePopup(){
+    console.log("time to close");
+    if(popupWindow != null){
+        console.log("closing...");
+        popupWindow.close();
+        popupWindow = null;
+        popupOpen = false;
+    }
+}
 
-        function closePopup(){
-            console.log("time to close");
-            if(popupWindow != null){
-                console.log("closing...");
-                popupWindow.close();
-                popupWindow = null;
-                popupOpen = false;
-            }
-
-
-        }
+// Redirect contact information
+document.getElementById("contact").onclick = function(){
+location.href = "https://sagetsin.github.io/main/pages/contact-me.html"}
 
         //Sparkles
 

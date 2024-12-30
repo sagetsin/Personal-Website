@@ -412,7 +412,6 @@ br{
   flex-direction: column;
   font-size: 30px;
   text-align: left;
-  margin:20px;
 }
 
 .proj-img{
@@ -445,4 +444,29 @@ br{
     display: block;
     margin: 30px 30px 30px;
     background-color: #8A9A5B;
+}
+
+.contact-but{
+    background-color: #8A9A5B;
+    color: #fcfffa;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: url('./media/icons/star.png'), default;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 80%;
+}
+
+.contact-but:hover{
+    background-color: #c2d4a7;
+    color: #fcfffa;
+    transform: scale(1.1);
+}
+.contact-but:active {
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
