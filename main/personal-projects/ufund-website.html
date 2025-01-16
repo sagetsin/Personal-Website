@@ -22,19 +22,21 @@
     </header>
     <div class="rectangle">
         <div class="top-fade">
-            <h1>PERSONAL PROJECTS</h1>
+            <h1>PROJECTS</h1>
         </div>
         <div class="contents">
             <h2>UFund Website</h2>
             <hr class="horizontal-line">
             <p class="text" style="color: #fcfffa">
-                Date: April 2023 | Author(s): Sydney Tsin, Yoel Buzgalo, Nicole Orlik, Eric Manning, Sean Witham
+                Date: August 2024 - December 2024 | Author(s): Sydney Tsin, Yoel Buzgalo, Nicole Orlik, Eric Manning, Sean Witham
             </p>
             <p class="text" style="color: #fcfffa">
                 The UFund Website is a project I worked on with four other teammates for our SWEN 261, Introduction
                 to Software Engineering class in Fall 2024.
             </p>
-            <a class="text" style="color: #fcfffa" href="https://github.com/RIT-SWEN-261-07/team-project-2241-swen-261-07-g-swagoverflow">Link to UFund Website in Github</a>
+            <a class="text" style="color: #fcfffa"
+               href="https://github.com/RIT-SWEN-261-07/team-project-2241-swen-261-07-g-swagoverflow">Link to UFund
+                Website in Github</a>
             <video class="proj-demo" autoplay muted controls>
                 <source src="../../media/demos/Team%207G%20Sprint%204%20Demo%20Video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -47,6 +49,135 @@
                 </p>
             </div>
             <div class="text">
+                This was my first time working with Angular and a REST API. It was fun though getting into it and
+                solving
+                the problems that came up during development. This is also the first long-term group project I had in
+                Computer Science and it was a favorable one.
+                <br>
+                <h4>Executive Summary</h4>
+                The U-fund website we created is for the Sleep In Heavenly Peace organization. SHP is a non-profit
+                organization that builds and delivers beds to children who don’t have any. Needs include: bedding,
+                mattresses, volunteers, wood, nails, pillows, delivery drivers, delivery dates, etc.
+                <h4>High Level MVP Features</h4>
+                We had Helper and User authentication meaning that depending on the username the user signed in with
+                the application would redirect the user to the proper page and have the proper permissions.
+                <br>
+                A Helper would be able to:
+                <ul>
+                    <li>View the needs list</li>
+                    <li>Search within the needs list</li>
+                    <li>Add needs to their funding basket</li>
+                    <li>Remove needs from their funding basket</li>
+                    <li>Checkout the needs in their funding basket</li>
+                </ul>
+                <br>
+                An Admin would be able to:
+                <ul>
+                    <li>View the needs list</li>
+                    <li>Search within the needs list</li>
+                    <li>Add new needs to the needs list</li>
+                    <li>Delete needs from the needs list</li>
+                    <li>Edit needs in the needs list</li>
+                </ul>
+                <br>
+                There would also be data persistence meaning that all changes made to the cupboard and all helper's
+                funding baskets would be saved and preserved throughout user sessions and across all users.
+                <br>
+                We also had a few enhancements including adding <strong>due dates for needs, filtering the list,
+                sorting the list by date, and having a schedule view of dates in chronological order.</strong> These
+                were for
+                the 10% enhancement part of this assignment.
+                <br>
+                <strong>Due dates: </strong>Needs now have an optional due date. The date must be a real date. There is
+                also
+                an <code>OVERDUE</code> status based on if the date had passed or not. If there is no date then the
+                default status is not overdue and the date section is blank.
+                <strong>Sorting: </strong>The user is able to sort the needs in the list view from earliest to latest or
+                latest to earliest. All needs without dates are automatically sorted to the bottom of the view. This is
+                so
+                users can see which needs need the most attention first and if there are any overdue needs they can sort
+                them
+                and see them right at the top.
+                <strong>Filtration: </strong>We decided to have the option for users to filter the needs on whether they
+                have
+                a date or not. This would be useful to see if there are needs that need to be prioritized due to their
+                time constraints.
+                <strong>Schedule: </strong>Users have a schedule view where they can see the needs with dates
+                in chronological order and with some basic information about them. This is a separate page but it does
+                not
+                allow access to a helper page to an admin page or vice versa even though they both access the same page.
+                This page also lists needs with the same date in one section for a better experience.
+                <h4>Domain Model</h4>
+                <img alt="domain model" src="../../media/images/ufund-website-img/Domain Analysis Diagram.png">
+                <h4>Architecture</h4>
+                <img alt="tiers and layers" src="../../media/images/ufund-website-img/Tiers_Layers Diagram.png">
+                The web application is built using the Model-View-ViewModel (MVVM) architecture pattern. Each layer
+                represents tiers that it will run on (e.g. NeedController runs on Spring Boot).
+                <br>
+                The View knows about ViewModel, the ViewModel knows about the Model in that order. User is able to
+                interact with the web UI (View) The web UI’s services interact with the controllers which are the
+                ViewModels. The ViewModel Interacts with the Model that accesses the storage.
+                <br>
+                This allows us to separate the concerns of each View, ViewModel and Model into three different
+                responsibilities:
+                <ol>
+                    <li>The View is responsible for rendering, displaying the information to the client.</li>
+                    <li>The ViewModel is responsible for processing the requests and serving to those requests submitted
+                        by the View (Client).
+                    </li>
+                    <li>The Model is responsible for storing and caching the data from/to the storage, as well properly
+                        referencing each one of them for the ViewModel to be able to retrieve/access necessary
+                        information to process its business logic.</li>
+                </ol>
+                <br>
+                So, why is this good for maintenance?
+                <br>
+                <ul>
+                    <li>Having an architecture helps developers to distinguish different areas of responsibility, thus allowing us to construct a proper
+                    project tree/file structure.</li>
+                    <li>We can use different frameworks, libraries and even different machines/OS for each category (its tiers).
+                    Allowing for flexibility in design.</li>
+                    <li>Allows developers to continue expand and experimenting with their design in different areas enabling
+                    software development life cycle to continue without interruption.</li>
+                    <li>As the application size grows, the team can decide to split different roles/area of focus to work on.
+                    (e.g. front end developers focus on view and back end developers focus on ViewModel/Model).</li>
+                </ul>
+                <h4>Page Subview Hierarchy</h4>
+                <img alt="page subview hierarchy" src="../../media/images/ufund-website-img/Page Subview Widget Hierarchy.png">
+                <h4>Static Code Analysis</h4>
+                For this project we also used SonarQube to do a static code analysis to help improve the readability, security,
+                and efficiency of our code. SonarQube suggested overriding and providing hashCode method.
+                Java relies on hashCode() for data structures like HashMap and HashSet.
+                When using equals, we should also make sure the hashCode is the same
+                Reason? this is to prevent cases where objects with the same attributes but different hashCode values might be treated as equal.
+                Effectively, this helped our team to learn from our mistakes.
+                <h4>Team Rationale</h4>
+                There were some interesting things we did as a team:
+                <ol>
+                    <li><strong>Decision making: </strong>For decision-making we used Slack if it wasn't a significant change
+                    or if we were just looking for advice. For larger decisions like choosing our 10% enhancements were dealt
+                     with in group discussions in-person to ensure that everyone on the team was on the same page. We were also
+                    able to utilize different group problem-solving techniques like compromising or consensus.</li>
+                    <li><strong>Usage of utility files: </strong>During development, we realized that there were some shared
+                    functionality between different components. One of these shared functions was sorting by date, as the actual
+                     sorting function used it and also the schedule. We wanted to reduce redundancy and avoid unnecessary
+                    coupling. To achieve this, we created a new util file that stored several methods that could then be imported
+                    by several pages. This change allowed us to adhere to the reusability, single responsibility,and pure fabrication
+                    object-oriented design concepts. </li>
+                    <li><strong>Moving Schedule: </strong> We initially had the schedule on the main admin and helper pages
+                    but then realized that it made the design too cluttered and clunky. We moved the schedule to a
+                    new page and was able to maintain a simple and accessible design without risking security issues.</li>
+                    <li><strong>Removing time:</strong> Mid-dev, we also changed date and time to just date. We encountered some
+                        problems with pre-population, and it simplified the debugging process. We concluded that
+                        time wasn't necessary to the functionality as much as dates were.</li>
+                </ol>
+                <h4>Future Usability Improvements</h4>
+                <ul>
+                    <li>Add verification steps to prevent weird potentially accidental (but valid) inputs (typos, invalid dates, etc).</li>
+                    <li>Move and status messages to a consistent designated location.</li>
+                    <li>Add quick jump links to elements in the schedule for easier editing by admins.</li>
+                    <li>Include an instructional page displayed to newly registered user accounts</li>
+                </ul>
 
             </div>
         </div>
