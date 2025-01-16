@@ -406,7 +406,8 @@ br{
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
   padding: 10px;
   align-items: center;
   align-text: left;
